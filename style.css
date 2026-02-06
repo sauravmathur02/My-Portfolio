@@ -381,6 +381,17 @@ nav{
 .btn:hover{
     background-color: #ff004f;
 }
+/* Ongoing Projects */
+
+#ongoing-projects {
+    padding: 20px 0;
+}
+
+#ongoing-projects .work-list {
+    display: flex;
+    gap: 40px;
+    margin-top: 50px;
+}
 
 /* ---------------------Contacts-------------------- */
 .contact-left{
