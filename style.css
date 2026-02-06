@@ -220,6 +220,7 @@ nav{
     text-align: center;
     margin: 56px;
     font-size: 55px;
+
  }
 .skills-section {
     width: 100%;
@@ -229,7 +230,8 @@ nav{
 
 .skills-marquee {
     display: flex;
-    animation: scroll 15s linear infinite;
+    gap: 20px;
+    animation: scroll 25s linear infinite;
     white-space: nowrap;
 }
 .skills-marquee:hover {
@@ -545,4 +547,13 @@ nav .fas{
     color: #61b752;
     margin-top: -40px;
     display: block;
+}
+.fa-brain,
+.fa-chart-line,
+.fa-chart-simple,
+.fa-sliders,
+.fa-square-poll-vertical {
+    font-size: 45px;
+    color: #00ffcc;
+    margin-bottom: 0;
 }
