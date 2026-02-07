@@ -5,12 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website - Saurav Kumar</title>
+    <meta name="description"
+        content="Portfolio of Saurav Kumar, a Data Scientist and ML Engineer transforming data into impact.">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <meta property="og:title" content="Saurav Kumar - Data Scientist & ML Engineer">
+    <meta property="og:description"
+        content="Explore my portfolio of Data Science, Machine Learning, and Web Development projects.">
+    <!-- <meta property="og:image" content="URL_TO_YOUR_IMAGE"> -->
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/db6d7ab0c5.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div id="header">
+        <canvas id="particle-canvas"></canvas>
+        <div id="cursor"></div>
+        <div id="cursor-blur"></div>
         <div class="container">
             <nav>
                 <img src="" class="logo">
@@ -26,12 +36,13 @@
             </nav>
             <div class="header-text">
                 <!-- <p>Web Developer</p> -->
-                <h1>Hi, I'm <span>Saurav</span><br> Kumar From India</h1>
+                <h1>Hi, I'm <span>Saurav</span><br> Transforming Data into Impact</h1>
+                <p>I am a <span class="typing-text"></span></p>
             </div>
         </div>
     </div>
     <!-- ------------------------ about ------------------- -->
-    <div id="about"></div>
+    <div id="about" class="reveal"></div>
     <div class="container">
         <div class="row">
             <div class="about-col-1">
@@ -56,6 +67,7 @@
                     <!-- <p class="tab-links active-link" onclick="opentab('skills')">Skills</p> -->
                     <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
                     <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
                 </div>
                 <div class="tab-contents active-tab" id="Skills">
 
@@ -69,122 +81,163 @@
                 </div>
                 <div class="tab-contents active-tab" id="experience">
                     <ul>
-
-                        <li><span>Salesforce Virtual Internship:</span><br>Developer <br> • Completed modules on
-                            Salesforce CRM, gaining practical knowledge of its features and functionalities.<br>
-                            • Worked on case studies and projects to apply CRM solutions in real-world scenarios.<br>
-                            • Developed and customized Salesforce applications using Apex and Visualforce.
-                            <br May 2024 - June 2024 </li>
-                            <!-- <li><span>UI/UX Designer</span><br>User Experience</li>
-                        <li><span>Software Engineer</span><br>Development</li> -->
+                        <li><span>Jan 2026 - Present</span><br>Student Volunteer & Program Coordinator<br>Rashtriya
+                            Raksha University<br>
+                            • Coordinated "AI for Policing" training program for DCPW officers.<br>
+                            • Managed technical sessions and participant coordination.
+                        </li>
+                        <li><span>May 2024 - June 2024</span><br>Salesforce Developer Intern<br>Salesforce Virtual
+                            Internship<br>
+                            • Gained exposure to CRM workflows and Apex/Visualforce development.<br>
+                            • Implemented real-world business solutions.
+                        </li>
                     </ul>
                 </div>
+                <!-- 
                 <div class="tab-contents" id="education">
                     <ul>
 
                         <li><span>2025 - Current</span><br>Rashtriya Raksha University, Gandhinagar<br>M.Tech - Data
-                            Science and Machine Learning</li>
+                            Science and Machine Learning<br>CGPA: 6.50 / 10</li>
                         <li><span>2021 - 2025</span><br>Institute of Technology and Management, Gwalior<br>B.Tech -
-                            Information Technology</li>
+                            Information Technology<br>CGPA: 7.86 / 10</li>
                         <li><span>2019-2020</span><br>P.C.S Senior Secondary School <br>12th Grade</li>
                         <li><span>2018-2019</span><br>Adarsh H/S Khudai Sarbahda<br>10th Grade</li>
+                    </ul>
+                </div> 
+                -->
+                <div class="tab-contents" id="education">
+                    <ul>
+
+                        <li><span>2025 - Current</span><br>Rashtriya Raksha University, Gandhinagar<br>M.Tech - Data
+                            Science and Machine Learning<br>CGPA: 6.50 / 10</li>
+                        <li><span>2021 - 2025</span><br>Institute of Technology and Management, Gwalior<br>B.Tech -
+                            Information Technology<br>CGPA: 7.86 / 10</li>
+                        <li><span>2019-2020</span><br>P.C.S Senior Secondary School <br>12th Grade</li>
+                        <li><span>2018-2019</span><br>Adarsh H/S Khudai Sarbahda<br>10th Grade</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="certifications">
+                    <ul>
+                        <li><span>GATE 2025 Qualified</span><br>Computer Science & IT</li>
+                        <li><span>AWS Academy Cloud Architecting</span><br>Amazon Web Services</li>
+                        <li><span>Salesforce Administrator Certification</span><br>Salesforce</li>
+                        <li><span>Data Analytics Virtual Experience</span><br>Deloitte Australia</li>
+                        <li><span>Data Visualisation</span><br>Tata Group</li>
+                        <li><span>Python Web Development</span><br>Infosys Foundation</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 
-    </div>
-    </div>
+
     <!-- ----------------------services-------------------- -->
 
+
     <!-- ---------------------- Skills -------------------- -->
-    <div id="skills">
+    <div id="skills" class="reveal">
         <div class="container">
             <h1 class="sub-title-space">Skills</h1>
 
-            <div class="skills-marquee">
+            <div class="skills-section">
+                <div class="skills-marquee">
 
-                <!-- Core Programming -->
-                <div class="skill">
-                    <i class="fa-brands fa-python py"></i><br><br>Python
+                    <!-- Core Programming -->
+                    <div class="skill">
+                        <i class="fa-brands fa-python py"></i><br><br>Python
+                    </div>
+
+                    <div class="skill">
+                        <img src="images/icons8-my-sql-48.png"><br><br>SQL
+                    </div>
+
+                    <div class="skill">
+                        <img src="images/icons8-c++-48.png"><br><br>C++
+                    </div>
+
+                    <div class="skill">
+                        <i class="fa-brands fa-java ja"></i><br><br>Java
+                    </div>
+
+                    <!-- Data & ML -->
+                    <div class="skill">
+                        <i class="fa-solid fa-chart-line"></i><br><br>Data Analysis
+                    </div>
+
+                    <div class="skill">
+                        <i class="fa-solid fa-brain"></i><br><br>Machine Learning
+                    </div>
+
+                    <div class="skill">
+                        <i class="fa-solid fa-sliders"></i><br><br>Feature Engineering
+                    </div>
+
+                    <div class="skill">
+                        <i class="fa-solid fa-square-poll-vertical"></i><br><br>Model Eval & Tuning
+                    </div>
+
+                    <div class="skill">
+                        <img src="images/icons8-tensorflow-48.png"><br><br>TensorFlow
+                    </div>
+
+                    <div class="skill">
+                        <img src="images/icons8-pytorch-48.png"><br><br>PyTorch
+                    </div>
+
+                    <!-- Libraries -->
+                    <div class="skill">
+                        <img src="images/icons8-numpy-48.png"><br><br>NumPy
+                    </div>
+
+                    <div class="skill">
+                        <img src="images/icons8-pandas-48.png"><br><br>Pandas
+                    </div>
+
+                    <div class="skill">
+                        <i class="fa-solid fa-chart-simple"></i><br><br>Data Visualization
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="skill">
+                        <img src="images/icons8-power-bi-2021-48.png"><br><br>Power BI
+                    </div>
+
+                    <div class="skill">
+                        <img src="images/icons8-github.gif"><br><br>Git & GitHub
+                    </div>
+
+                    <div class="skill">
+                        <img src="images/icons8-aws-48.png"><br><br>AWS
+                    </div>
+
+                    <!-- Web (kept minimal) -->
+                    <div class="skill">
+                        <i class="fa-brands fa-html5 ht"></i><br><br>HTML
+                    </div>
+
+                    <div class="skill">
+                        <i class="fa-brands fa-js js"></i><br><br>JavaScript
+                    </div>
+
                 </div>
-
-                <div class="skill">
-                    <img src="images/icons8-my-sql-48.png"><br><br>SQL
-                </div>
-
-                <div class="skill">
-                    <img src="images/icons8-c++-48.png"><br><br>C++
-                </div>
-
-                <div class="skill">
-                    <i class="fa-brands fa-java ja"></i><br><br>Java
-                </div>
-
-                <!-- Data & ML -->
-                <div class="skill">
-                    <i class="fa-solid fa-chart-line"></i><br><br>Data Analysis
-                </div>
-
-                <div class="skill">
-                    <i class="fa-solid fa-brain"></i><br><br>Machine Learning
-                </div>
-
-                <div class="skill">
-                    <i class="fa-solid fa-sliders"></i><br><br>Feature Engineering
-                </div>
-
-                <div class="skill">
-                    <i class="fa-solid fa-square-poll-vertical"></i><br><br>Model Evaluation
-                </div>
-
-                <!-- Libraries -->
-                <div class="skill">
-                    <img src="images/icons8-numpy-48.png"><br><br>NumPy
-                </div>
-
-                <div class="skill">
-                    <img src="images/icons8-pandas-48.png"><br><br>Pandas
-                </div>
-
-                <div class="skill">
-                    <i class="fa-solid fa-chart-simple"></i><br><br>Data Visualization
-                </div>
-
-                <!-- Tools -->
-                <div class="skill">
-                    <img src="images/icons8-power-bi-2021-48.png"><br><br>Power BI
-                </div>
-
-                <div class="skill">
-                    <img src="images/icons8-github.gif"><br><br>Git & GitHub
-                </div>
-
-                <div class="skill">
-                    <img src="images/icons8-aws-48.png"><br><br>AWS
-                </div>
-
-                <!-- Web (kept minimal) -->
-                <div class="skill">
-                    <i class="fa-brands fa-html5 ht"></i><br><br>HTML
-                </div>
-
-                <div class="skill">
-                    <i class="fa-brands fa-js js"></i><br><br>JavaScript
-                </div>
-
             </div>
         </div>
     </div>
 
     <!-- <---------------------------Portfolio------------------------------------->
 
-    <div id="portfolio">
+    <div id="portfolio" class="reveal">
         <div class="container">
             <h1 class="sub-title">My projects</h1>
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterProjects('all')">All</button>
+                <button class="filter-btn" onclick="filterProjects('ml')">ML / AI</button>
+                <button class="filter-btn" onclick="filterProjects('data')">Data Analytics</button>
+                <button class="filter-btn" onclick="filterProjects('web')">Web Dev</button>
+            </div>
             <div class="work-list">
-                <div class="work">
+                <div class="work" data-category="ml">
                     <img src="images/Project1.png">
                     <div class="layer">
                         <h3>Chat with Zax</h3>
@@ -192,12 +245,17 @@
                             conversations through text and voice commands, providing answers, jokes, and web search
                             capabilities.
                         </p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">NLP</span>
+                            <span class="tech-badge">Web</span>
+                        </div>
                         <a
                             href="https://github.com/sauravmathur01/MyProjects/tree/8c840829c6ab523d65956f710ab6060558abbaba/MyPortfoilio"><i
                                 class="fa-solid fa-link"></i></a>
                     </div>
                 </div>
-                <div class="work">
+                <div class="work" data-category="data">
                     <img src="images/data_Analytics_logo.png">
                     <div class="layer">
                         <h3>Patient Summary Dashboard</h3>
@@ -205,65 +263,151 @@
                             professionals with a comprehensive overview of patient information, enabling efficient
                             tracking of health metrics and facilitating informed decision-making.
                         </p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Power BI</span>
+                            <span class="tech-badge">SQL</span>
+                            <span class="tech-badge">Data Viz</span>
+                        </div>
                         <a
                             href="https://github.com/sauravmathur01/PowerBI/blob/4e77355afeb4dfe02f8f37888188b43eca873328/Syneos%20Patient%20Dashboard.pbix"><i
                                 class="fa-solid fa-link"></i></a>
                     </div>
                 </div>
-                <div class="work">
+                <div class="work" data-category="web">
                     <img src="images/work-3.png">
                     <div class="layer">
                         <h3>Social Media App</h3>
                         <p>The app connects you to the talented people around the world.
                             Download it from play store.
                         </p>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Java</span>
+                            <span class="tech-badge">Android</span>
+                            <span class="tech-badge">Firebase</span>
+                        </div>
+                        <div class="link-group">
+                            <a href="#"><i class="fa-solid fa-link"></i></a>
+                            <a href="#" title="Live Demo"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hidden Projects -->
+                <div class="work hidden-project" data-category="data">
+                    <img src="images/ola.jpg" alt="Ola Dashboard">
+                    <div class="layer">
+                        <h3>Ola Ride Data Analytics Dashboard</h3>
+                        <p>Processed 50,000+ ride records using SQL and Power BI to analyze revenue trends, peak hours,
+                            and driver performance.</p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">SQL</span>
+                            <span class="tech-badge">Power BI</span>
+                            <span class="tech-badge">Excel</span>
+                        </div>
+                        <div class="link-group">
+                            <a href="#"><i class="fa-solid fa-link"></i></a>
+                            <a href="#" title="Live Demo"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work hidden-project">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>Hidden Project 2</h3>
+                        <p>This is a sample description for a hidden project revealed by clicking See More.</p>
+                        <div class="link-group">
+                            <a href="#"><i class="fa-solid fa-link"></i></a>
+                            <a href="#" title="Live Demo"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work hidden-project">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>Hidden Project 3</h3>
+                        <p>This is a sample description for a hidden project revealed by clicking See More.</p>
+                        <div class="link-group">
+                            <a href="#"><i class="fa-solid fa-link"></i></a>
+                            <a href="#" title="Live Demo"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn"> See more</a>
         </div>
+        <a href="javascript:void(0)" class="btn" onclick="seeMoreProjects()" id="see-more-btn">See more</a>
+        <a href="javascript:void(0)" class="btn" onclick="seeLessProjects()" id="see-less-btn"
+            style="display: none;">See less</a>
+    </div>
 
     </div>
     <!-- ---------------------- Ongoing Projects -------------------- -->
-<!-- ---------------------- Ongoing Projects -------------------- -->
-<div id="ongoing-projects">
-    <div class="container">
-        <h1 class="sub-title">Ongoing Projects</h1>
 
-        <div class="ongoing-work-list">
+    <div id="ongoing-projects" class="reveal">
+        <div class="container">
+            <h1 class="sub-title">Ongoing Projects</h1>
 
-            <div class="ongoing-work">
-                <img src="images/work-3.png" alt="Ongoing Project">
-                <div class="layer">
-                    <h3>Vision-Based Anomaly Detection</h3>
-                    <p>
-                        Computer vision system to detect anomalies in urban road scenes using deep learning.
-                        <br><br>
-                        <strong>Status:</strong> In Progress
-                    </p>
+            <div class="ongoing-work-list">
+
+                <div class="ongoing-work">
+                    <img src="images/work-3.png" alt="Ongoing Project">
+                    <div class="layer">
+                        <h3>Vision-Based Anomaly Detection</h3>
+                        <p>
+                            Computer vision system to detect anomalies in urban road scenes using deep learning.
+                            <br><br>
+                            <strong>Status:</strong> In Progress
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="ongoing-work">
-                <img src="images/work-3.png" alt="Ongoing Project">
-                <div class="layer">
-                    <h3>AI-Powered Help Bot</h3>
-                    <p>
-                        NLP-based intelligent help bot for automated information retrieval.
-                        <br><br>
-                        <strong>Status:</strong> In Progress
-                    </p>
+                <div class="ongoing-work">
+                    <img src="images/work-3.png" alt="Ongoing Project">
+                    <div class="layer">
+                        <h3>AI-Powered Help Bot</h3>
+                        <p>
+                            NLP-based intelligent help bot for automated information retrieval.
+                            <br><br>
+                            <strong>Status:</strong> In Progress
+                        </p>
+                    </div>
                 </div>
-            </div>
 
+                <!-- Hidden Ongoing Projects -->
+                <div class="ongoing-work hidden-project">
+                    <img src="images/work-3.png" alt="Ongoing Project">
+                    <div class="layer">
+                        <h3>Future AI Project</h3>
+                        <p>
+                            Upcoming research on generative AI models.
+                            <br><br>
+                            <strong>Status:</strong> Planning
+                        </p>
+                    </div>
+                </div>
+
+                <div class="ongoing-work hidden-project">
+                    <img src="images/work-3.png" alt="Ongoing Project">
+                    <div class="layer">
+                        <h3>IoT Smart Home</h3>
+                        <p>
+                            Integration of IoT devices for smart energy management.
+                            <br><br>
+                            <strong>Status:</strong> Prototyping
+                        </p>
+                    </div>
+                </div>
+
+            </div>
         </div>
+        <a href="javascript:void(0)" class="btn" onclick="seeMoreOngoing()" id="see-more-ongoing-btn">See more</a>
+        <a href="javascript:void(0)" class="btn" onclick="seeLessOngoing()" id="see-less-ongoing-btn"
+            style="display: none;">See less</a>
     </div>
-</div>
+
+
 
 
     <!-- --------------------------contact---------------- -->
-    <div id="contact">
+    <div id="contact" class="reveal">
         <div class="container">
             <div class="row">
 
@@ -280,7 +424,8 @@
                             href="https://www.linkedin.com/in/saurav-kumar-6bab77179?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
                                 class="fab fa-linkedin"></i></a>
                     </div>
-                    <a href="Document/Saurav_Resume.pdf" download class="btn btn2">Download CV</a>
+                    <a href="https://drive.google.com/file/d/1mvd7dBqvfalpU21lqP7lQ2wmGLViPN_l/view?usp=drive_link"
+                        target="_blank" class="btn btn2">Download CV</a>
                 </div>
                 <span id="msgcv"></span>
                 <div class="contact-right">
@@ -295,7 +440,7 @@
             </div>
         </div>
         <div class="copyright">
-            <p>Copyright. Made with <i class="fa-solid fa-heart"></i> by Saurav Kumar</p>
+            <p>Copyright &copy; <span id="year"></span>. Made with <i class="fa-solid fa-heart"></i> by Saurav Kumar</p>
         </div>
     </div>
 
@@ -358,6 +503,281 @@
                 this.innerHTML = 'Download CV';
             }.bind(this), 5000);
         });
+
+        // See More Functionality
+        function seeMoreProjects() {
+            var hiddenProjects = document.querySelectorAll('#portfolio .hidden-project');
+            hiddenProjects.forEach(function (project) {
+                project.style.display = 'block';
+                // Add hide class first to ensure start state
+                project.classList.add('hide');
+
+                // Trigger animation
+                setTimeout(() => {
+                    project.classList.remove('hide');
+                }, 10);
+            });
+            document.getElementById('see-more-btn').style.display = 'none';
+            document.getElementById('see-less-btn').style.display = 'block';
+        }
+
+        function seeLessProjects() {
+            var hiddenProjects = document.querySelectorAll('#portfolio .hidden-project');
+            hiddenProjects.forEach(function (project) {
+                project.style.display = 'none';
+            });
+            document.getElementById('see-more-btn').style.display = 'block';
+            document.getElementById('see-less-btn').style.display = 'none';
+        }
+
+        function seeMoreOngoing() {
+            var hiddenOngoing = document.querySelectorAll('#ongoing-projects .hidden-project');
+            hiddenOngoing.forEach(function (project) {
+                project.style.display = 'block';
+                // Add hide class first to ensure start state
+                project.classList.add('hide');
+
+                // Trigger animation
+                setTimeout(() => {
+                    project.classList.remove('hide');
+                }, 10);
+            });
+            document.getElementById('see-more-ongoing-btn').style.display = 'none';
+            document.getElementById('see-less-ongoing-btn').style.display = 'block';
+        }
+
+        function seeLessOngoing() {
+            var hiddenOngoing = document.querySelectorAll('#ongoing-projects .hidden-project');
+            hiddenOngoing.forEach(function (project) {
+                project.style.display = 'none';
+            });
+            document.getElementById('see-more-ongoing-btn').style.display = 'block';
+            document.getElementById('see-less-ongoing-btn').style.display = 'none';
+        }
+
+        // Project Filtering
+        function filterProjects(category) {
+            const projects = document.querySelectorAll('.work-list .work');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Update active button
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.innerText.toLowerCase().includes(category === 'ml' ? 'ml' : category === 'data' ? 'data' : category === 'web' ? 'web' : 'all')) {
+                    btn.classList.add('active');
+                }
+            });
+
+            projects.forEach(project => {
+                const projectCategory = project.getAttribute('data-category');
+
+                if (category === 'all' || projectCategory === category) {
+                    project.style.display = 'block';
+                    setTimeout(() => {
+                        project.classList.remove('hide');
+                    }, 10);
+                } else {
+                    project.classList.add('hide');
+                    setTimeout(() => {
+                        project.style.display = 'none';
+                    }, 500); // Wait for transition
+                }
+            });
+
+            // Hide "See More" button when filtering to avoid confusion
+            if (category !== 'all') {
+                document.getElementById('see-more-btn').style.display = 'none';
+            } else {
+                document.getElementById('see-more-btn').style.display = 'block';
+            }
+        }
+
+        // Typing Text Effect
+        const texts = ["Data Scientist", "Machine Learning Engineer", "Web Developer"];
+        let count = 0;
+        let index = 0;
+        let currentText = "";
+        let letter = "";
+
+        (function type() {
+            if (count === texts.length) {
+                count = 0;
+            }
+            currentText = texts[count];
+            letter = currentText.slice(0, ++index);
+
+            document.querySelector(".typing-text").textContent = letter;
+            if (letter.length === currentText.length) {
+                count++;
+                index = 0;
+                setTimeout(type, 2000); // Wait before typing next word
+            } else {
+                setTimeout(type, 100);
+            }
+        }());
+
+        // Dynamic Year
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        // Scroll Reveal
+        window.addEventListener('scroll', scrollReveal);
+
+        function scrollReveal() {
+            var reveals = document.querySelectorAll('.reveal');
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var revealTop = reveals[i].getBoundingClientRect().top;
+                var revealPoint = 50;
+
+                if (revealTop < windowHeight - revealPoint) {
+                    reveals[i].classList.add('active');
+                } else {
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+        // Trigger once on load
+        scrollReveal();
+
+        // Particle Network for Background
+        const canvas = document.getElementById("particle-canvas");
+        const ctx = canvas.getContext("2d");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let particlesArray;
+
+        class Particle {
+            constructor(x, y, dx, dy, size, color) {
+                this.x = x;
+                this.y = y;
+                this.dx = dx;
+                this.dy = dy;
+                this.size = size;
+                this.color = color;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+
+            update() {
+                if (this.x > canvas.width || this.x < 0) this.dx = -this.dx;
+                if (this.y > canvas.height || this.y < 0) this.dy = -this.dy;
+                this.x += this.dx;
+                this.y += this.dy;
+                this.draw();
+            }
+        }
+
+        function init() {
+            particlesArray = [];
+            let numberOfParticles = (canvas.height * canvas.width) / 9000;
+            for (let i = 0; i < numberOfParticles; i++) {
+                let size = (Math.random() * 2) + 1;
+                let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
+                let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
+                let dx = (Math.random() * 1) - 0.5;
+                let dy = (Math.random() * 1) - 0.5;
+                let color = '#ff004f';
+                particlesArray.push(new Particle(x, y, dx, dy, size, color));
+            }
+        }
+
+        function connect() {
+            let opacityValue = 1;
+            for (let a = 0; a < particlesArray.length; a++) {
+                for (let b = a; b < particlesArray.length; b++) {
+                    let distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x)) + ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));
+                    if (distance < (canvas.width / 7) * (canvas.height / 7)) {
+                        opacityValue = 1 - (distance / 20000);
+                        ctx.strokeStyle = 'rgba(255, 0, 79,' + opacityValue + ')';
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+                        ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            ctx.clearRect(0, 0, innerWidth, innerHeight);
+            for (let i = 0; i < particlesArray.length; i++) {
+                particlesArray[i].update();
+            }
+            connect();
+        }
+
+        window.addEventListener('resize', function () {
+            canvas.width = innerWidth;
+            canvas.height = innerHeight;
+            init();
+        });
+
+        init();
+        animate();
+
+        // Custom Cursor
+        const cursor = document.getElementById("cursor");
+        const cursorBlur = document.getElementById("cursor-blur");
+
+        document.addEventListener("mousemove", function (e) {
+            cursor.style.left = e.pageX + "px";
+            cursor.style.top = e.pageY + "px";
+            cursorBlur.style.left = e.pageX + "px";
+            cursorBlur.style.top = e.pageY + "px";
+        });
+
+        // 3D Tilt Effect
+        const works = document.querySelectorAll(".work, .ongoing-work");
+
+        works.forEach(work => {
+            work.addEventListener("mousemove", (e) => {
+                let rect = work.getBoundingClientRect();
+                let x = e.clientX - rect.left;
+                let y = e.clientY - rect.top;
+
+                let centerX = rect.width / 2;
+                let centerY = rect.height / 2;
+
+                let rotateX = ((y - centerY) / centerY) * -10; // Max rotation deg
+                let rotateY = ((x - centerX) / centerX) * 10;
+
+                work.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+            });
+
+            work.addEventListener("mouseleave", () => {
+                work.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)";
+            });
+        });
+    </script>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script>
+        // Back to Top Button
+        let mybutton = document.getElementById("myBtn");
+
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
     </script>
 </body>
 
