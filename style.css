@@ -318,17 +318,83 @@ h3 {
     overflow: hidden;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent-color);
-    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
-}
-
-.project-header {
+/* Project Tabs */
+.section-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 20px;
+    align-items: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.section-title {
+    margin-bottom: 0;
+    /* Override default */
+}
+
+.project-tabs {
+    display: flex;
+    gap: 10px;
+    background: var(--card-bg);
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    padding: 8px 16px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-weight: 500;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.tab-btn:hover {
+    color: var(--text-primary);
+}
+
+.tab-btn.active {
+    background: var(--accent-dim);
+    color: var(--accent-color);
+}
+
+/* Tab Views */
+.hidden-view {
+    display: none;
+    opacity: 0;
+}
+
+.active-view {
+    display: grid;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Badge Colors for Planning/Prototyping */
+.status-badge.planning {
+    background: rgba(156, 39, 176, 0.2);
+    color: #ce93d8;
+}
+
+.status-badge.prototyping {
+    background: rgba(33, 150, 243, 0.2);
+    color: #64b5f6;
 }
 
 .project-icon {

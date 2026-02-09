@@ -106,7 +106,8 @@
                     <h3>Machine Learning & AI</h3>
                     <div class="skill-grid">
                         <div class="skill-item"><img src="images/tensorflow.svg" alt="TensorFlow">
-                            <span>TensorFlow</span></div>
+                            <span>TensorFlow</span>
+                        </div>
                         <div class="skill-item"><img src="images/pytorch.svg" alt="PyTorch"> <span>PyTorch</span></div>
                         <div class="skill-item"><i class="fa-solid fa-brain"></i> <span>Scikit-Learn</span></div>
                         <div class="skill-item"><i class="fa-solid fa-language"></i> <span>NLP</span></div>
@@ -144,8 +145,16 @@
     <!-- Projects Section -->
     <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">Selected Research & Projects</h2>
-            <div class="projects-grid">
+            <div class="section-header">
+                <h2 class="section-title">Selected Research & Projects</h2>
+                <div class="project-tabs">
+                    <button class="tab-btn active" onclick="switchTab('completed')">Completed</button>
+                    <button class="tab-btn" onclick="switchTab('upcoming')">Future Scope</button>
+                </div>
+            </div>
+
+            <!-- Completed Projects Grid -->
+            <div id="projects-completed" class="projects-grid active-view">
 
                 <!-- Project 1 -->
                 <article class="project-card">
@@ -164,9 +173,6 @@
                             anomalies in real-time.</p>
                         <p><strong>Status:</strong> <span class="status-badge ongoing">Research In Progress</span></p>
                     </div>
-                    <!-- <div class="project-links">
-                        <a href="#" class="link-btn">View Code <i class="fa-brands fa-github"></i></a>
-                    </div> -->
                 </article>
 
                 <!-- Project 2 -->
@@ -230,12 +236,68 @@
                             driver performance metrics.</p>
                         <p><strong>Outcome:</strong> Identified key revenue opportunities.</p>
                     </div>
-                    <div class="project-links">
-                        <!-- <a href="#" class="link-btn">View Analysis <i class="fa-solid fa-file-lines"></i></a> -->
+                </article>
+
+            </div>
+
+            <!-- Upcoming/Ongoing Projects Grid -->
+            <div id="projects-upcoming" class="projects-grid hidden-view">
+
+                <!-- Upcoming 1 -->
+                <article class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fa-solid fa-robot"></i></div>
+                        <div class="project-meta">
+                            <h3>AI-Powered Help Bot</h3>
+                            <span class="project-tag">NLP</span>
+                            <span class="project-tag">Generative AI</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p><strong>Goal:</strong> Create an intelligent agent capable of context-aware troubleshooting
+                            for IT systems.</p>
+                        <p><strong>Planned Stack:</strong> Python, LangChain, OpenAI API.</p>
+                        <p><strong>Status:</strong> <span class="status-badge planning">Planning Phase</span></p>
+                    </div>
+                </article>
+
+                <!-- Upcoming 2 -->
+                <article class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fa-brands fa-instalod"></i></div>
+                        <div class="project-meta">
+                            <h3>IoT Smart Home Energy System</h3>
+                            <span class="project-tag">IoT</span>
+                            <span class="project-tag">Deep Learning</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p><strong>Goal:</strong> Optimize household energy consumption using predictive usage modeling.
+                        </p>
+                        <p><strong>Planned Stack:</strong> Raspberry Pi, Python, TensorFlow Lite.</p>
+                        <p><strong>Status:</strong> <span class="status-badge prototyping">Prototyping</span></p>
+                    </div>
+                </article>
+
+                <!-- Upcoming 3 -->
+                <article class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fa-solid fa-brain"></i></div>
+                        <div class="project-meta">
+                            <h3>Future Generative AI Research</h3>
+                            <span class="project-tag">LLMs</span>
+                            <span class="project-tag">Research</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p><strong>Goal:</strong> Investigating bias capabilities in small language models.</p>
+                        <p><strong>Planned Stack:</strong> PyTorch, Hugging Face Transformers.</p>
+                        <p><strong>Status:</strong> <span class="status-badge planning">Topic Selection</span></p>
                     </div>
                 </article>
 
             </div>
+
         </div>
     </section>
 
@@ -368,6 +430,31 @@
                 canvas.height = window.innerHeight;
                 init();
             });
+        }
+
+        // Project Tabs
+        function switchTab(tabName) {
+            const completedGrid = document.getElementById('projects-completed');
+            const upcomingGrid = document.getElementById('projects-upcoming');
+            const tabBtns = document.querySelectorAll('.tab-btn');
+
+            if (tabName === 'completed') {
+                completedGrid.classList.remove('hidden-view');
+                completedGrid.classList.add('active-view');
+                upcomingGrid.classList.remove('active-view');
+                upcomingGrid.classList.add('hidden-view');
+
+                tabBtns[0].classList.add('active');
+                tabBtns[1].classList.remove('active');
+            } else {
+                completedGrid.classList.remove('active-view');
+                completedGrid.classList.add('hidden-view');
+                upcomingGrid.classList.remove('hidden-view');
+                upcomingGrid.classList.add('active-view');
+
+                tabBtns[0].classList.remove('active');
+                tabBtns[1].classList.add('active');
+            }
         }
     </script>
 </body>
