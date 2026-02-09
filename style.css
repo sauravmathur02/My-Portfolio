@@ -798,6 +798,95 @@ nav .fas {
     margin-bottom: 0;
 }
 
+/* Static Skills List */
+/* Static Skills List (Updated) */
+.skills-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin: 50px auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.skills-category {
+    background: #262626;
+    padding: 30px;
+    border-radius: 10px;
+    flex-basis: 300px;
+    flex-grow: 1;
+    transition: transform 0.3s;
+}
+
+.skills-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 0, 79, 0.2);
+}
+
+.skills-category h3 {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ff004f;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.skills-grid {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-grid li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #e0e0e0;
+}
+
+.skills-grid li i,
+.skills-grid li img.img-s {
+    margin-right: 12px;
+    font-size: 20px;
+    width: 24px;
+    /* Normalize icon width */
+    text-align: center;
+}
+
+/* Small icons specific colors/styles */
+.py-s {
+    color: #ffee00;
+}
+
+.ja-s {
+    color: #ff004f;
+}
+
+.js-s {
+    color: #f7df1e;
+}
+
+.ht-s {
+    color: #e34c26;
+}
+
+.ml-s,
+.da-s,
+.fe-s,
+.me-s,
+.dv-s {
+    color: #00ffcc;
+}
+
+.img-s {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+
 .hidden-project {
     display: none;
 }
